@@ -19,13 +19,13 @@ Convolution, a simple mathematical operation, is a way of `multiplying together'
 When convolution operation is applied to an image, then it is can be said that a simple mathematical operation is done over the image. The values of the pixels in the image are changed to some degree during convolution operation. 
 kernel or the filter is used to carry out convolution operation .
 
-![Image](https://github.com/navyajain16/navyajain16.github.io/blob/main/image/figure1.jpg)
+![Image](https://github.com/navyajain16/navyajain16/blob/main/image/figure1.jpg)
 
 For example, it can be seen in the figure that a 3×3 kernel is applied over a 7×7 dimensional image. By taking the values of the kernel into consideration, we can change the values of the image pixels.
 
 By using the identity kernel, as given below, for carrying out the convolution process on an image, as a result, we get an image that is the same as the original image. 
 
-![Image](https://github.com/navyajain16/navyajain16.github.io/blob/main/image/figure2.jpg)
+![Image](https://github.com/navyajain16/navyajain16/blob/main/image/figure2.jpg)
 
 Note that by using a kernel, detecting and highlighting of edges, sharpening, and un sharpening images can be done.
 
@@ -37,7 +37,7 @@ I personally was able to understand it the best so I decided to proceed with it.
 
 ## DEBLURRING OF IMAGES BY SHARPENING FILTER 
 
-![Image](https://github.com/navyajain16/navyajain16.github.io/blob/main/image/roseblur.jpg) &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; ![Image](https://github.com/navyajain16/navyajain16.github.io/blob/main/image/rosesharpen.jpg) &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;           ![Image](https://github.com/navyajain16/navyajain16.github.io/blob/main/image/rosedenoise.jpg)
+![Image](https://github.com/navyajain16/navyajain16/blob/main/image/roseblur.jpg) &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; ![Image](https://github.com/navyajain16/navyajain16/blob/main/image/rosesharpen.jpg) &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;           ![Image](https://github.com/navyajain16/navyajain16/blob/main/image/rosedenoise.jpg)
 
    *Blurred Image* &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;    *Sharpened Image*&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;    *Denoised Image*
    
