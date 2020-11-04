@@ -25,7 +25,24 @@ For example, it can be seen in the figure that a 3×3 kernel is applied over a 7
 
 By using the identity kernel, as given below, for carrying out the convolution process on an image, as a result, we get an image that is the same as the original image. 
 
-![Image] (
+![Image](https://github.com/navyajain16/navyajain16.github.io/blob/main/image/figure2.jpg)
+
+Note that by using a kernel, detecting and highlighting of edges, sharpening, and un sharpening images can be done.
+
+## DEBLURRING OF IMAGES
+
+After learning some basic concepts about deblurring, I looked into ways to deblur an image in python. I found many methods to deblur like by Lucy Richardson Algorithm, using Wiener filter, Sharpening filter, etc. Among all these methods the one I liked the most was deblurring by sharpening filter which is there in the open CV.
+
+I personally was able to understand it the best so I decided to proceed with it.
+
+## DEBLURRING OF IMAGES BY SHARPENING FILTER 
+
+![Image](https://github.com/navyajain16/navyajain16.github.io/blob/main/image/roseblur.jpg) &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; ![Image](https://github.com/navyajain16/navyajain16.github.io/blob/main/image/rosesharpen.jpg)             ![Image](https://github.com/navyajain16/navyajain16.github.io/blob/main/image/rosedenoise.jpg)
+
+   *Blurred Image*    *Sharpened Image*    *Denoised Image*
+   
+
+
 
 ### Markdown
 
