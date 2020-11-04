@@ -414,7 +414,7 @@ After running this code these are the results I got. As it can be seen the origi
 
 <img src="https://raw.githubusercontent.com/navyajain16/navyajain16/main/image/lena2.jpg" width=150 height=150/> &nbsp;&nbsp;&nbsp;&nbsp; <img src="https://raw.githubusercontent.com/navyajain16/navyajain16/main/image/lenagaus.jpg" width=150 height=150/> &nbsp;&nbsp;&nbsp;&nbsp;  <img src="https://raw.githubusercontent.com/navyajain16/navyajain16/main/image/lenasharp.jpg" width=150 height=150/> &nbsp;&nbsp;&nbsp;&nbsp; <img src="https://raw.githubusercontent.com/navyajain16/navyajain16/main/image/lenadenoise.jpg" width=150 height=150/>
 
-*Original Image* &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *Blurred Image* &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *Sharepend Image* &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *Deblurred Image*
+*Original Image* &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *Blurred Image* &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;; *Sharpend Image* &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;; *Deblurred Image*
  
 
 ## REFERENCES
