@@ -19,7 +19,7 @@ Convolution, a simple mathematical operation, is a way of `multiplying together'
 When convolution operation is applied to an image, then it is can be said that a simple mathematical operation is done over the image. The values of the pixels in the image are changed to some degree during convolution operation. 
 kernel or the filter is used to carry out convolution operation .
 
-<img src="https://github.com/navyajain16/navyajain16/blob/main/image/figure1.jpg" width=200 /> 
+<img src="https://github.com/navyajain16/navyajain16/blob/main/image/figure1.jpg" width=400 /> 
 
 For example, it can be seen in the figure that a 3×3 kernel is applied over a 7×7 dimensional image. By taking the values of the kernel into consideration, we can change the values of the image pixels.
 
@@ -37,9 +37,9 @@ I personally was able to understand it the best so I decided to proceed with it.
 
 ## DEBLURRING OF IMAGES BY SHARPENING FILTER 
 
-![Image](https://github.com/navyajain16/navyajain16/blob/main/image/roseblur.jpg) &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; ![Image](https://github.com/navyajain16/navyajain16/blob/main/image/rosesharpen.jpg) &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;           ![Image](https://github.com/navyajain16/navyajain16/blob/main/image/rosedenoise.jpg)
+<img src="https://github.com/navyajain16/navyajain16/blob/main/image/roseblur.jpg" width=250 />  &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; <img src="https://github.com/navyajain16/navyajain16/blob/main/image/rosesharpen.jpg" width=250 />  &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; <img src="https://github.com/navyajain16/navyajain16/blob/main/image/rosedenoise.jpg" width=250 /> 
 
-   *Blurred Image* &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    *Sharpened Image*&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    *Denoised Image*
+   *Blurred Image* &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   *Sharpened Image*&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   *Denoised Image*
    
 For deblurring images by this method there are 2 steps to be followed:
 1.	The first is to sharpen the image. 
@@ -226,6 +226,94 @@ In the picture below we can see that the input image on the left is processed wi
 It is the basic blur filter. Here, it has the same value of 1/9 for all coefficient values. On applying the convolution operator, we get an output the same as on the right side as shown. The image will be more blurred as a filter size increases.  
 
 ![Image](https://github.com/navyajain16/navyajain16/blob/main/image/figure3.jpg)
+
+This is the code of average filter which I tried :
+
+### CODE 
+
+```markdown
+import cv2
+
+img = cv2.imread("lena.jpg")
+
+blurImg = cv2.blur(img,(9,9))
+
+cv2.imshow('Averaging',blurImg )
+
+cv2.destroyAllWindows()
+```
+
+## LINE BY LINE EXPLANATION OF CODE 
+
+```markdown
+import cv2
+```
+
+I have imported library cv2 in the above line as mentioned above.
+
+```markdown
+img = cv2.imread("lena.jpg")
+```
+
+I have used cv2.imread() method in the code.                                             
+The explanation of this method is given above.
+
+```markdown
+blurImg = cv2.blur(image,(9,9))
+```
+                      
+I have used cv2.blur() method in the code. 
+Using this method an image is blurred using the normalized box filter. The kernel which is represented below is used by the function to smooth an image:
+                                                                         
+This the function that blurs the image by the average filter. Its syntax is as follows:
+
+_cv2.blur(src, ksize[, dst[, anchor[, borderType]]])_
+
+**Parameters:**
+
+**src**: it's the link of the image which is to be blurred.
+
+**ksize**: A blurring kernel size tupple.
+
+**dst**: It is the output image of the identical size and type as src.
+
+**anchor**: An integer type variable used to represent anchor point. The point is (-1, -1) is its default value which implies that the anchor is at the kernel center.
+
+**borderType**: It is for type border to be added. It is defined by flags like cv2.BORDER_CONSTANT, cv2.BORDER_REFLECT, etc
+
+```markdown
+cv2.imshow('Averaging',blurImg )
+```
+
+I have used cv2.imshow() function above 
+The explanation of this function is given above.
+
+```markdown
+cv2.waitKey(0)
+```
+
+I have used cv2.waitKey() function.                                                            
+The explanation of this function is given above.
+
+```markdown
+cv2.destroyAllWindows()
+```
+
+I have used cv2.destroyAllWindows() function.  Using this function all the windows we created are destroyed.
+
+## OUTPUT IMAGE
+
+This is the output I got after running the code:
+
+![Image](https://github.com/navyajain16/navyajain16/blob/main/image/lenaavg.jpg)
+
+*Average blur*
+
+
+
+
+
+
 
 
 
