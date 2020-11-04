@@ -407,7 +407,7 @@ cv2.waitKey()
 
 After running this code these are the results I got. As it can be seen the original image and deblurred final images are very similar. Hence the method I used was successful for deblurring of images.
 
-<img src="https://raw.githubusercontent.com/navyajain16/navyajain16/main/image/lena2.jpg" width=150/> &nbsp;&nbsp;&nbsp;&nbsp; <img src="https://raw.githubusercontent.com/navyajain16/navyajain16/main/image/lenagaus.jpg" width=150/> &nbsp;&nbsp;&nbsp;&nbsp;  <img src="https://raw.githubusercontent.com/navyajain16/navyajain16/main/image/lenasharp.jpg" width=150/> &nbsp;&nbsp;&nbsp;&nbsp; <img src="https://raw.githubusercontent.com/navyajain16/navyajain16/main/image/lenadenoise.jpg width=150/>
+<img src="https://raw.githubusercontent.com/navyajain16/navyajain16/main/image/lena2.jpg" width=150/> &nbsp;&nbsp;&nbsp;&nbsp; <img src="https://raw.githubusercontent.com/navyajain16/navyajain16/main/image/lenagaus.jpg" width=150/> &nbsp;&nbsp;&nbsp;&nbsp;  <img src="https://raw.githubusercontent.com/navyajain16/navyajain16/main/image/lenasharp.jpg" width=150/> &nbsp;&nbsp;&nbsp;&nbsp; <img src="https://raw.githubusercontent.com/navyajain16/navyajain16/main/image/lenadenoise.jpg" width=150/>
 
 ## REFERENCES
 
