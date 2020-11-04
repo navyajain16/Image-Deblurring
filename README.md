@@ -19,13 +19,13 @@ Convolution, a simple mathematical operation, is a way of `multiplying together'
 When convolution operation is applied to an image, then it is can be said that a simple mathematical operation is done over the image. The values of the pixels in the image are changed to some degree during convolution operation. 
 kernel or the filter is used to carry out convolution operation .
 
-<img src="https://github.com/navyajain16/navyajain16/blob/main/image/figure1.jpg?raw=true" width=400 /> 
+<img src="https://raw.githubusercontent.com/navyajain16/navyajain16/main/image/figure1.jpg" width=400 /> 
 
 For example, it can be seen in the figure that a 3×3 kernel is applied over a 7×7 dimensional image. By taking the values of the kernel into consideration, we can change the values of the image pixels.
 
 By using the identity kernel, as given below, for carrying out the convolution process on an image, as a result, we get an image that is the same as the original image. 
 
-![Image](https://github.com/navyajain16/navyajain16/blob/main/image/figure2.jpg)
+![Image](https://raw.githubusercontent.com/navyajain16/navyajain16/main/image/figure2.jpg)
 
 Note that by using a kernel, detecting and highlighting of edges, sharpening, and un sharpening images can be done.
 
@@ -37,7 +37,7 @@ I personally was able to understand it the best so I decided to proceed with it.
 
 ## DEBLURRING OF IMAGES BY SHARPENING FILTER 
 
-<img src="https://github.com/navyajain16/navyajain16/blob/main/image/roseblur.jpg" width=250 />  &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; <img src="https://github.com/navyajain16/navyajain16/blob/main/image/rosesharpen.jpg" width=250 />  &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; <img src="https://github.com/navyajain16/navyajain16/blob/main/image/rosedenoise.jpg" width=250 /> 
+<img src="https://raw.githubusercontent.com/navyajain16/navyajain16/main/image/roseblur.jpg" width=250 />  &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; <img src="https://raw.githubusercontent.com/navyajain16/navyajain16/main/image/rosesharpen.jpg" width=250 />  &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; <img src="https://raw.githubusercontent.com/navyajain16/navyajain16/main/image/rosedenoise.jpg" width=250 /> 
 
    *Blurred Image* &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   *Sharpened Image*&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   *Denoised Image*
    
@@ -132,7 +132,7 @@ _filter2D(src, dst, ddepth, kernel)_
 
 This is what a sharpened image would look like:
 
-![Image](https://github.com/navyajain16/navyajain16/blob/main/image/rosesharpen.jpg)
+![Image](https://raw.githubusercontent.com/navyajain16/navyajain16/main/image/rosesharpen.jpg)
 
 *Sharpened image*
 
@@ -154,7 +154,7 @@ _cv2.fastNlMeansDenoisingColored( src [, dst [ , h [, hcolor [, templateWindowSi
 
 This is what denoised image would look like :   
 
-![Image](https://github.com/navyajain16/navyajain16/blob/main/image/rosedenoise.jpg)
+![Image](https://raw.githubusercontent.com/navyajain16/navyajain16/main/image/rosedenoise.jpg)
 
 *Denoised image*
 
@@ -183,7 +183,7 @@ It is a function used for keyboard binding. Time in milliseconds is its argument
 ## OUTPUT IMAGE
 Following is the output of the code above:
 
-![Image](https://github.com/navyajain16/navyajain16/blob/main/image/rosedenoise.jpg)
+![Image](https://raw.githubusercontent.com/navyajain16/navyajain16/main/image/rosedenoise.jpg)
 
 *Deblurred image*
 
@@ -191,7 +191,7 @@ After deblurring the image, I wondered if the image I deblurred is similar to th
 
 I choose the most popular image processing image Lena for this purpose
 
-![Image](https://github.com/navyajain16/navyajain16/blob/main/image/lena2.jpg)
+![Image](https://raw.githubusercontent.com/navyajain16/navyajain16/main/image/lena2.jpg)
 
 Then I started to find ways to blur an image. 
 
@@ -219,13 +219,13 @@ Before starting with blurring using open cv make sure you have installed the fol
 
 In the picture below we can see that the input image on the left is processed with the averaging filter (box filter). 
 
-![Image](https://github.com/navyajain16/navyajain16/blob/main/image/lena2.jpg) &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ![Image](https://github.com/navyajain16/navyajain16/blob/main/image/lenaavg.jpg)
+![Image](https://raw.githubusercontent.com/navyajain16/navyajain16/main/image/lena2.jpg) &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ![Image](https://raw.githubusercontent.com/navyajain16/navyajain16/main/image/lenaavg.jpg)
 
 *Original image*  &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *Average blur*
 
 It is the basic blur filter. Here, it has the same value of 1/9 for all coefficient values. On applying the convolution operator, we get an output the same as on the right side as shown. The image will be more blurred as a filter size increases.  
 
-![Image](https://github.com/navyajain16/navyajain16/blob/main/image/figure3.jpg)
+![Image](https://raw.githubusercontent.com/navyajain16/navyajain16/main/image/figure3.jpg)
 
 This is the code of average filter which I tried :
 
@@ -265,7 +265,7 @@ blurImg = cv2.blur(image,(9,9))
 I have used cv2.blur() method in the code. 
 Using this method an image is blurred using the normalized box filter. The kernel which is represented below is used by the function to smooth an image:
 
-![Image](https://github.com/navyajain16/navyajain16/blob/main/image/figure4.jpg)
+![Image](https://raw.githubusercontent.com/navyajain16/navyajain16/main/image/figure4.jpg)
 
                                                                          
 This the function that blurs the image by the average filter. Its syntax is as follows:
@@ -308,7 +308,7 @@ I have used cv2.destroyAllWindows() function.  Using this function all the windo
 
 This is the output I got after running the code:
 
-![Image](https://github.com/navyajain16/navyajain16/blob/main/image/lenaavg.jpg)
+![Image](https://raw.githubusercontent.com/navyajain16/navyajain16/main/image/lenaavg.jpg)
 
 *Average blur*
 
@@ -316,26 +316,26 @@ This is the output I got after running the code:
 The Gaussian filter or blur is a slightly more complicated filter and is the most commonly used kernel in image processing It is called the Gaussian filter.
 In the picture below we can see that the input image on the left is processed with the Gaussian Filter shown in right. 
                      
-![Image](https://github.com/navyajain16/navyajain16/blob/main/image/lena2.jpg) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ![Image](https://github.com/navyajain16/navyajain16/blob/main/image/lenagaus.jpg)
+![Image](https://raw.githubusercontent.com/navyajain16/navyajain16/main/image/lena2.jpg) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ![Image](https://raw.githubusercontent.com/navyajain16/navyajain16/main/image/lenagaus.jpg)
 
 *Original Image* &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *Gaussian Blur* 
 
 The famous Gaussian function is used for creation of this filter. 
 The probability that events are centered around a mean value is represented by this function. Furthermore, the width of this function is controlled by the standard deviation (σ) of this function. Sampling this function’s values, gives the coefficients for a Gaussian filter matrix. Effect of different (σ) values can be observed in the following image.
 
-![Image](https://github.com/navyajain16/navyajain16/blob/main/image/figure5.jpg)
+![Image](https://raw.githubusercontent.com/navyajain16/navyajain16/main/image/figure5.jpg)
 
 
-<img src="https://github.com/navyajain16/navyajain16/blob/main/image/figure6.jpg" width=400/>
+<img src="https://raw.githubusercontent.com/navyajain16/navyajain16/main/image/figure6.jpg" width=400/>
 
 
 The equation for a Gaussian filter kernel of size (2k+1)×(2k+1) is given by:
 
-![Image](https://github.com/navyajain16/navyajain16/blob/main/image/figure7.jpg)
+![Image](https://raw.githubusercontent.com/navyajain16/navyajain16/main/image/figure7.jpg)
 
 A 5x5 gaussian filter will look like this :
 
-![Image](https://github.com/navyajain16/navyajain16/blob/main/image/figure8.jpg)
+![Image](https://raw.githubusercontent.com/navyajain16/navyajain16/main/image/figure8.jpg)
 
 
 ### CODE 
@@ -376,7 +376,7 @@ _cv2.GaussianBlur(src, ksize, sigmaX[, dst[, sigmaY[, borderType=BORDER_DEFAULT]
 ## OUTPUT IMAGE
 This is the output I got after running the above code :
 
-![Image](https://github.com/navyajain16/navyajain16/blob/main/image/lenagaus.jpg)
+![Image](https://raw.githubusercontent.com/navyajain16/navyajain16/main/image/lenagaus.jpg)
 
 *Gaussian Blur*
 
@@ -407,7 +407,7 @@ cv2.waitKey()
 
 After running this code these are the results I got. As it can be seen the original image and deblurred final images are very similar. Hence the method I used was successful for deblurring of images.
 
-<img src="https://github.com/navyajain16/navyajain16/blob/main/image/lena2.jpg" width=150/> &nbsp;&nbsp;&nbsp;&nbsp; <img src="https://github.com/navyajain16/navyajain16/blob/main/image/lenagaus.jpg" width=150/> &nbsp;&nbsp;&nbsp;&nbsp;  <img src="https://github.com/navyajain16/navyajain16/blob/main/image/lenasharp.jpg" width=150/> &nbsp;&nbsp;&nbsp;&nbsp; <img src="https://github.com/navyajain16/navyajain16/blob/main/image/lenadenoise.jpg" width=150/>
+<img src="https://raw.githubusercontent.com/navyajain16/navyajain16/main/image/lena2.jpg" width=150/> &nbsp;&nbsp;&nbsp;&nbsp; <img src="https://raw.githubusercontent.com/navyajain16/navyajain16/main/image/lenagaus.jpg" width=150/> &nbsp;&nbsp;&nbsp;&nbsp;  <img src="https://raw.githubusercontent.com/navyajain16/navyajain16/main/image/lenasharp.jpg" width=150/> &nbsp;&nbsp;&nbsp;&nbsp; <img src="https://raw.githubusercontent.com/navyajain16/navyajain16/main/image/lenadenoise.jpg width=150/>
 
 ## REFERENCES
 
