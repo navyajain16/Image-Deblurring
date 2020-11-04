@@ -37,9 +37,9 @@ I personally was able to understand it the best so I decided to proceed with it.
 
 ## DEBLURRING OF IMAGES BY SHARPENING FILTER 
 
-![Image](https://github.com/navyajain16/navyajain16.github.io/blob/main/image/roseblur.jpg) &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; ![Image](https://github.com/navyajain16/navyajain16.github.io/blob/main/image/rosesharpen.jpg)             ![Image](https://github.com/navyajain16/navyajain16.github.io/blob/main/image/rosedenoise.jpg)
+![Image](https://github.com/navyajain16/navyajain16.github.io/blob/main/image/roseblur.jpg) &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; ![Image](https://github.com/navyajain16/navyajain16.github.io/blob/main/image/rosesharpen.jpg) &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;           ![Image](https://github.com/navyajain16/navyajain16.github.io/blob/main/image/rosedenoise.jpg)
 
-   *Blurred Image*    *Sharpened Image*    *Denoised Image*
+   *Blurred Image* &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;    *Sharpened Image*&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;    *Denoised Image*
    
 
 
