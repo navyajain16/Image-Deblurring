@@ -41,6 +41,49 @@ I personally was able to understand it the best so I decided to proceed with it.
 
    *Blurred Image* &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    *Sharpened Image*&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    *Denoised Image*
    
+For deblurring images by this method there are 2 steps to be followed:
+1.	The first is to sharpen the image. 
+2.	Then denoise it to remove noise from the image.
+
+Let’s start with deblurring.
+I have deblurred images using open CV library.
+
+## PREREQUISITES FOR DEBLURRING USING OPEN CV 
+
+### LIBRARIES 
+
+Before starting with deblurring using open cv make sure you have installed the following libraries 
+
+1.	Open CV: It is a Python library that can be used to solve computer vision problems. 
+         This library can be installed by writing the following code in command prompt or anaconda prompt: Pip install opencv-python
+         It is imported as import cv2 in the code.
+         
+2.	NumPy: NumPy is a python library that is used for working with arrays. It also has functions for working in the domain of linear algebra, Fourier transform, and matrices.
+This library is usually pre-installed in python (Anaconda 3). But if it’s not there then it can be installed by writing the following code in command prompt or anaconda prompt: Pip install numpy.
+
+It is imported as import numpy in the code.
+
+## DEBLURRING OF IMAGES 
+
+The code I used to deblur my images is:  
+
+### CODE
+
+```markdown
+import cv2
+import numpy as np
+
+image = cv2.imread('flower.jpg')
+
+sharpen_kernel = np.array([[-1,-1,-1], [-1,9,-1], [-1,-1,-1]])
+sharpen = cv2.filter2D(image, 0 , sharpen_kernel)
+
+deblurred = cv2.fastNlMeansDenoisingColored(sharpen,None,10,10,7,21)
+
+cv2.imshow(‘deblureed’, deblurred)
+cv2.waitKey ()
+
+
 
 
 
