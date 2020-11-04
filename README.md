@@ -1,8 +1,30 @@
-## Welcome to GitHub Pages
+# Deblurring images in python
 
-You can use the [editor on GitHub](https://github.com/navyajain16/navyajain16.github.io/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+Recently,as I was going through my gallery I found many images that were pretty good but were blurred. This got me to think if there was some way to remove blur from these images. 
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Since I am learning python these days so I decided to use my knowledge of python to remove blur from images.
+
+As I was looking for ways, I came across a word kernel which played an important role in deblurring. I wondered what exactly is a kernel?
+
+## What is Kernel?
+
+A kernel, convolution matrix,or mask in image processing is a small matrix that is used for various applications like blurring, sharpening, embossing, edge detection, etc which is done by a convolution between an image and a kernel.
+
+## 2D CONVOLUTION IN IMAGES 
+
+While reading about kernel I saw the word Convolution and a question popped into my mind that what is convolution and how is it applied to images?
+
+Convolution, a simple mathematical operation, is a way of `multiplying together' two arrays of numbers having different sizes but the same dimensionality to produce a third array of numbers of the same dimensionality. 
+
+When convolution operation is applied to an image, then it is can be said that a simple mathematical operation is done over the image. The values of the pixels in the image are changed to some degree during convolution operation. 
+kernel or the filter is used to carry out convolution operation .
+
+![Image](figure1.jpg)
+
+For example, it can be seen in the figure that a 3×3 kernel is applied over a 7×7 dimensional image. By taking the values of the kernel into consideration, we can change the values of the image pixels.
+
+By using the identity kernel, as given below, for carrying out the convolution process on an image, as a result, we get an image that is the same as the original image. 
+
 
 ### Markdown
 
