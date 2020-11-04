@@ -215,7 +215,7 @@ Before starting with blurring using open cv make sure you have installed the fol
          This library can be installed by writing the following code in command prompt or anaconda prompt: Pip install opencv-python
          It is imported as import cv2 in the code
 
-**1.	Average Blur**
+## 1.	Average Blur
 
 In the picture below we can see that the input image on the left is processed with the averaging filter (box filter). 
 
@@ -264,6 +264,9 @@ blurImg = cv2.blur(image,(9,9))
                       
 I have used cv2.blur() method in the code. 
 Using this method an image is blurred using the normalized box filter. The kernel which is represented below is used by the function to smooth an image:
+
+![Image](https://github.com/navyajain16/navyajain16/blob/main/image/figure4.jpg)
+
                                                                          
 This the function that blurs the image by the average filter. Its syntax is as follows:
 
@@ -309,8 +312,69 @@ This is the output I got after running the code:
 
 *Average blur*
 
+## 2.	Gaussian Blur 
+The Gaussian filter or blur is a slightly more complicated filter and is the most commonly used kernel in image processing It is called the Gaussian filter.
+In the picture below we can see that the input image on the left is processed with the Gaussian Filter shown in right. 
+                     
+![Image](https://github.com/navyajain16/navyajain16/blob/main/image/lena2.jpg) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ![Image](https://github.com/navyajain16/navyajain16/blob/main/image/lenagaus.jpg)
+
+*Original Image* &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *Gaussian Blur* 
+
+The famous Gaussian function is used for creation of this filter. 
+The probability that events are centered around a mean value is represented by this function. Furthermore, the width of this function is controlled by the standard deviation (σ) of this function. Sampling this function’s values, gives the coefficients for a Gaussian filter matrix. Effect of different (σ) values can be observed in the following image.
+
+![Image](https://github.com/navyajain16/navyajain16/blob/main/image/figure5.jpg)
 
 
+<img src="https://github.com/navyajain16/navyajain16/blob/main/image/figure6.jpg" width=400/>
+
+
+The equation for a Gaussian filter kernel of size (2k+1)×(2k+1) is given by:
+
+![Image](https://github.com/navyajain16/navyajain16/blob/main/image/figure7.jpg)
+
+A 5x5 gaussian filter will look like this :
+
+![Image](https://github.com/navyajain16/navyajain16/blob/main/image/figure8.jpg)
+
+
+### CODE 
+
+```markdown
+import cv2
+
+img = cv2.imread("lena.jpg")
+
+gausBlur = cv2.GaussianBlur(image, (5,5),0)
+
+cv2.imshow('Gaussian Blurring', gausBlur)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+```
+
+## LINE BY LINE EXPLANATION OF CODE
+
+All lines of code are explained except line 3 which is explained below.
+
+```markdown
+gausBlur = cv2.GaussianBlur(image, (5,5),0)
+```
+
+I have used cv2.GaussianBlur() function for Gaussian blurring.      
+In this function, the width and height of the kernel specified should be positive and odd. The standard deviation in the X and Y directions should also be specified ascsigma X and sigma Y respectively. If only sigma X is specified, sigma Y is taken as equal to sigma X. Its syntax is as follows:
+
+_cv2.GaussianBlur(src, ksize, sigmaX[, dst[, sigmaY[, borderType=BORDER_DEFAULT]]] )_
+
+**Parameters:**
+**src**: it's the link of image which is to be blurred.
+**ksize**: It is the Gaussian Kernel Size. If ksize is set to [0 0], then ksize is computed from sigma values. 
+**dst**: It is the output image of the same size and type as src.
+**sigma X**: Kernel standard deviation along X-axis (horizontal direction).                                                                                             
+**sigma Y**: Kernel standard deviation along Y-axis (vertical direction). If sigma Y=0, then sigma X value is taken for sigma Y
+**borderType**: It depicts what kind of border to be added. It is defined by flags like cv2.BORDER_CONSTANT, cv2.BORDER_REFLECT, etc.
+
+## OUTPUT IMAGE
+This is the output I got after running the above code :
 
 
 
