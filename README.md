@@ -146,10 +146,14 @@ It is mostly used to remove Gaussian noise. Its syntax is as follows
 _cv2.fastNlMeansDenoisingColored( src [, dst [ , h [, hcolor [, templateWindowSize [, searchWindowSize ]]]]])_
 
 **Parameters:** 
-**src** : It is the link of image to be deblurred.                                                      
-**dst** : Output image with the same size and type as src.                              
-**h**: filter strength is regulated by this component. The greater h component greater the image denoised but also removes noise from minute details and smaller the h component smaller the image denoised and also preserves the noise in minute details.                                                                   
-**templateWindowSize**: Template patch size in pixels that are used to compute weights. It Should be odd preferably 7 pixels. 
+**src** : It is the link of image to be deblurred.
+
+**dst** : Output image with the same size and type as src.
+
+**h**: filter strength is regulated by this component. The greater h component greater the image denoised but also removes noise from minute details and smaller the h component smaller the image denoised and also preserves the noise in minute details.
+
+**templateWindowSize**: Template patch size in pixels that are used to compute weights. It Should be odd preferably 7 pixels.
+
 **searchWindowSize** : Size of the window in pixels that can compute the weighted average for a given pixel. Just like templateWindowSize this should be odd too preferably 21 pixels. It affects the performance linearly that is greater searchWindowsSize, greater will be denoising time. 
 
 This is what denoised image would look like :   
