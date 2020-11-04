@@ -193,6 +193,44 @@ I choose the most popular image processing image Lena for this purpose
 
 ![Image](https://github.com/navyajain16/navyajain16/blob/main/image/lena2.jpg)
 
+Then I started to find ways to blur an image. 
+
+## TYPES OF BLURRING 
+
+I found that there were 4 kinds of blurring methods:
+•	Average Blur also referred to as box filter or average filter
+•	Gaussian Blur also referred to as Gaussian filter
+•	Median Blur also referred to as Median filter
+•	Bilateral Blur also referred to as Bilateral filter
+
+Average Blur and Gaussian blur are the most commonly used blurring techniques about which I tried and have discussed below:
+
+## PREREQUISITES FOR BLURRING USING OPEN CV
+
+## LIBRARIES
+
+Before starting with blurring using open cv make sure you have installed the following libraries
+
+1.	Open CV: It is a Python library that can be used to solve computer vision problems. 
+         This library can be installed by writing the following code in command prompt or anaconda prompt: Pip install opencv-python
+         It is imported as import cv2 in the code
+
+**1.	Average Blur**
+
+In the picture below we can see that the input image on the left is processed with the averaging filter (box filter). 
+
+![Image](https://github.com/navyajain16/navyajain16/blob/main/image/lena2.jpg) &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ![Image](https://github.com/navyajain16/navyajain16/blob/main/image/lenaavg.jpg)
+
+*Original image*  &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *Average blur*
+
+It is the basic blur filter. Here, it has the same value of 1/9 for all coefficient values. On applying the convolution operator, we get an output the same as on the right side as shown. The image will be more blurred as a filter size increases.  
+
+![Image](https://github.com/navyajain16/navyajain16/blob/main/image/figure3.jpg)
+
+
+
+         
+
 
 
 
