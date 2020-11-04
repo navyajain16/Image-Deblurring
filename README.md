@@ -376,6 +376,59 @@ _cv2.GaussianBlur(src, ksize, sigmaX[, dst[, sigmaY[, borderType=BORDER_DEFAULT]
 ## OUTPUT IMAGE
 This is the output I got after running the above code :
 
+![Image](https://github.com/navyajain16/navyajain16/blob/main/image/lenagaus.jpg)
+
+*Gaussian Blur*
+
+## DEBLURRING OF IMAGES
+
+After learning about blurring I tried deblurring them again to verify the results of the algorithm used. This is what I did :
+
+### CODE 
+
+```markdown
+import cv2
+import numpy as np
+
+image = cv2.imread('lena2.jpg')
+
+gausBlur = cv2.GaussianBlur(image, (5,5),0)
+
+sharpen_kernel = np.array([[-1,-1,-1], [-1,9,-1], [-1,-1,-1]])
+sharpen = cv2.filter2D(gausBlur, 0 , sharpen_kernel)
+
+deblurred = cv2.fastNlMeansDenoisingColored(sharpen,None,10,10,7,21)
+
+cv2.imshow('deblurred', deblurred)
+cv2.waitKey()
+```
+
+## RESULTS
+
+After running this code these are the results I got. As it can be seen the original image and deblurred final images are very similar. Hence the method I used was successful for deblurring of images.
+
+<img src="https://github.com/navyajain16/navyajain16/blob/main/image/lena2.jpg" width=150/> &nbsp;&nbsp;&nbsp;&nbsp; <img src="https://github.com/navyajain16/navyajain16/blob/main/image/lenagaus.jpg" width=150/> &nbsp;&nbsp;&nbsp;&nbsp;  <img src="https://github.com/navyajain16/navyajain16/blob/main/image/lenasharpen.jpg" width=150/> &nbsp;&nbsp;&nbsp;&nbsp; <img src="https://github.com/navyajain16/navyajain16/blob/main/image/lenadeoise.jpg" width=150/>
+
+## REFERENCES
+
+For Learning about image deblurring and blurring I referred to the following websites and articles. These articles helped me a lot in learning deblurring and blurring of images. 
+
+[https://www.analyticsvidhya.com/blog/2020/09/how-to-perform-blur-detection-using-opencv-in-python/](https://www.analyticsvidhya.com/blog/2020/09/how-to-perform-blur-detection-using-opencv-in-python/)
+
+[https://homepages.inf.ed.ac.uk/rbf/HIPR2/convolve.htm](https://homepages.inf.ed.ac.uk/rbf/HIPR2/convolve.htm)
+
+[https://debuggercafe.com/image-and-video-blurring-using-opencv-and-python/](https://debuggercafe.com/image-and-video-blurring-using-opencv-and-python/)
+
+[https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_imgproc/py_filtering/py_filtering.html](https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_imgproc/py_filtering/py_filtering.html)
+
+[http://datahacker.rs/004-how-to-smooth-and-sharpen-an-image-in-opencv/](http://datahacker.rs/004-how-to-smooth-and-sharpen-an-image-in-opencv/) 
+
+## CONCLUSION 
+
+This is what I did to deblur images. It was a successful method but as said above there are many more methods to deblur images that can be tried out.
+I hope this would help you also to deblur some images of your own.
+
+
 
 
 
@@ -396,34 +449,3 @@ This is the output I got after running the above code :
 
 
 
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/navyajain16/navyajain16.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
