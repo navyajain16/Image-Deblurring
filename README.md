@@ -83,6 +83,124 @@ deblurred = cv2.fastNlMeansDenoisingColored(sharpen,None,10,10,7,21)
 cv2.imshow(‘deblureed’, deblurred)
 cv2.waitKey ()
 ```
+## LINE BY LINE EXPLANATION OF CODE 
+
+```markdown
+import cv2
+import numpy as np
+```
+I have imported library cv2 and numpy in the above line as mentioned above.
+
+```markdown
+image = cv2.imread('flower.jpg')
+```
+I have used cv2.imread() method in the code.     
+
+cv2.imread() is a method in python that is used for loading an image from the specified file\\.
+
+Here the image loaded is “flower.jpg” which is the image to be blurred. “img” is the variable here. Its syntax is as follows:
+
+_cv2.imread(path, flag)_
+
+**Parameters:**
+
+**path:**  Path is a string that represents the path of the image to be read.
+
+**flag:** Flag specifies how the image is read. The default value is cv2.IMREAD_COLOR
+
+```markdown
+sharpen_kernel = np.array([[-1,-1,-1], [-1,9,-1], [-1,-1,-1]])
+```
+
+This is the convolution kernel which will be used for sharpening the image. The explanation of kernel is mentioned above. 
+
+```markdown
+sharpen = cv2.filter2D(image , 0 , sharpen_kernel)
+```
+
+By use of this line of code, I have sharpened the image.                           
+In Open CV Sharpen filter doesn’t have an implemented function. Therefore, cv2.filter2D() function is used which processes the with an arbitrary filter. 
+Colored images are often sharpened with this function. This operation convolves an image with the kernel. Its syntax is as follows:
+
+_filter2D(src, dst, ddepth, kernel)_
+
+**Parameters:**
+**src:** It is the link of image to be deblurred.
+**dst** − It is the output image of the same size and type as src.   
+**ddepth** – An integer type variable representing the depth of the output image.
+**kernel** – It is the convolution kernel.
+
+This is what a sharpened image would look like:
+
+![Image](https://github.com/navyajain16/navyajain16/blob/main/image/rosesharpen.jpg)
+
+*Sharpened image*
+
+```markdown
+deblurred = cv2.fastNlMeansDenoisingColored(gausBlur,None,10,10,7,21)
+```
+
+By this line of code, I have denoised the image to remove noise from a sharpened image.                                                                          cv2.fastNlMeansDenoisingColored() function is the of Non-local Means Denoising algorithm implementation. 
+It is mostly used to remove Gaussian noise. Its syntax is as follows
+
+_cv2.fastNlMeansDenoisingColored( src [, dst [ , h [, hcolor [, templateWindowSize [, searchWindowSize ]]]]])_
+
+**Parameters:** 
+**src** : It is the link of image to be deblurred.                                                      
+**dst** : Output image with the same size and type as src.                              
+**h**: filter strength is regulated by this component. The greater h component greater the image denoised but also removes noise from minute details and smaller the h component smaller the image denoised and also preserves the noise in minute details.                                                                   
+**templateWindowSize**: Template patch size in pixels that are used to compute weights. It Should be odd preferably 7 pixels. 
+**searchWindowSize** : Size of the window in pixels that can compute the weighted average for a given pixel. Just like templateWindowSize this should be odd too preferably 21 pixels. It affects the performance linearly that is greater searchWindowsSize, greater will be denoising time. 
+
+This is what denoised image would look like :   
+
+![Image](https://github.com/navyajain16/navyajain16/blob/main/image/rosedenoise.jpg)
+
+*Denoised image*
+
+```markdown
+cv2.imshow('sharpen', deblurred)
+```
+
+We have used cv2.imshow() function above 
+To display an image in a window, cv2.imshow() method is used.    
+Using this method we have shown the deblurred image i.e. the output image. Its syntax is as follows:
+
+_cv2.imshow(window_name, image)_
+
+**Parameters:**
+**window_name**: This represents the name of the window in which the image will be displayed. 
+**image**: It is the output displayed image.
+
+```markdown
+cv2.waitKey(0)
+```
+
+We have used cv2.waitKey() function.                                                    
+It is a function used for keyboard binding. Time in milliseconds is its arguments. For specified milliseconds this for any keyboard event. The program is continued if any key is pressed at that time. It waits indefinitely for a keystroke in case 0 is passed.
+
+
+## OUTPUT IMAGE
+Following is the output of the code above:
+
+![Image](https://github.com/navyajain16/navyajain16/blob/main/image/rosedenoise.jpg)
+
+*Deblurred image*
+
+After deblurring the image, I wondered if the image I deblurred is similar to the original one or if it is different from the original image. If this algorithm was right or not. So I decided to take an original picture blur it and then again deblur it to confirm my method.
+
+I choose the most popular image processing image Lena for this purpose
+
+![Image](https://github.com/navyajain16/navyajain16/blob/main/image/lena2.jpg)
+
+
+
+
+
+
+
+
+
 
 
 
