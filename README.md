@@ -19,7 +19,7 @@ Convolution, a simple mathematical operation, is a way of `multiplying together'
 When convolution operation is applied to an image, then it is can be said that a simple mathematical operation is done over the image. The values of the pixels in the image are changed to some degree during convolution operation. 
 kernel or the filter is used to carry out convolution operation .
 
-<img src="https://github.com/navyajain16/navyajain16/blob/main/image/figure1.jpg" width=400 /> 
+<img src="https://github.com/navyajain16/navyajain16/blob/main/image/figure1.jpg?raw=true" width=400 /> 
 
 For example, it can be seen in the figure that a 3×3 kernel is applied over a 7×7 dimensional image. By taking the values of the kernel into consideration, we can change the values of the image pixels.
 
